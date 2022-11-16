@@ -556,6 +556,7 @@ bool QGCApplication::_initForNormalAppBoot()
     QQuickWindow* rootWindow = qgcApp()->mainRootWindow();
 
     if (rootWindow) {
+        rootWindow->setTitle("Vyorius Ground Station");
         rootWindow->scheduleRenderJob (new FinishVideoInitialization (toolbox()->videoManager()),
                 QQuickWindow::BeforeSynchronizingStage);
     }
